@@ -1,0 +1,36 @@
+.buttons{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:18px;
+}
+
+.buttons a{
+    width:58px;
+    height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:16px;
+    text-decoration:none;
+
+    color:#111;
+    background:#fff;
+
+    font-size:26px;
+
+    transition:.3s;
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,.4),
+        0 0 35px rgba(255,255,255,.25);
+}
+
+.buttons a:hover{
+    transform:translateY(-4px) scale(1.08);
+
+    box-shadow:
+        0 0 25px white,
+        0 0 60px rgba(255,255,255,.8);
+}

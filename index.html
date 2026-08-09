@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>3YSi</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="icon" type="image/png" href="3YSiF.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+overflow:hidden;
+background:black;
+color:white;
+height:100vh;
+}
+
+#bg-video{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-3;
+}
+
+.overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.45);
+z-index:-2;
+}
+
+.enter{
+position:fixed;
+inset:0;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#000;
+z-index:999;
+transition:.6s;
+}
+
+.enter button{
+padding:18px 45px;
+font-size:22px;
+cursor:pointer;
+background:rgb(0, 0, 0);
+color:rgb(255, 255, 255);
+border:none;
+border-radius:12px;
+transition:.3s;
+}
+
+.enter button:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px white;
+}
+
+.card{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+padding:40px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:22px;
+backdrop-filter:blur(18px);
+display:none;
+}
+
+.avatar{
+width:180px;
+height:180px;
+border-radius:18px;
+object-fit:cover;
+transition:.4s;
+box-shadow:0 0 25px rgba(255,255,255,.2);
+}
+
+.avatar:hover{
+transform:scale(1.05);
+box-shadow:0 0 35px white;
+}
+
+.title-wrap{
+margin-top:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:14px;
+}
+
+.title-icon{
+font-size:34px;
+line-height:1;
+text-shadow:0 0 15px white;
+}
+
+h1{
+font-size:55px;
+letter-spacing:5px;
+text-shadow:0 0 15px white;
+}
+
+p{
+opacity:.7;
+margin-top:10px;
+}
+
+.buttons{
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.buttons a{
+text-decoration:none;
+color:white;
+border:1px solid rgba(255,255,255,.2);
+padding:12px 22px;
+border-radius:12px;
+transition:.3s;
+}
+
+.buttons a:hover{
+background:white;
+color:black;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="enter" id="enter">
+
+<button onclick="startSite()">
+3YSi on Top
+</button>
+
+</div>
+
+<video id="bg-video" loop playsinline>
+<source src="aladeb.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<div class="card" id="card">
+
+<img src="3YSiP.png" class="avatar">
+
+<div class="title-wrap">
+  <span class="title-icon"></span>
+  <h1>3YSi</h1>
+</div>
+
+<p>3YSi Official Website</p>
+
+<div class="buttons">
+
+<a href="https://discord.com/users/1394719065771348019" target="_blank">
+    <i class="si si-discord"></i>
+</a>
+
+<a href="https://github.com/3YSi0" target="_blank">
+    <i class="si si-github"></i>
+</a>
+
+<a href="https://namemc.com/profile/3YSi" target="_blank">
+    <i class="si si-namemc"></i>
+</a>
+
+<a href="https://modrinth.com/user/3YSi0" target="_blank">
+    <i class="si si-modrinth"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function startSite(){
+
+const video=document.getElementById("bg-video");
+
+video.play();
+
+document.getElementById("enter").style.opacity="0";
+
+setTimeout(()=>{
+document.getElementById("enter").style.display="none";
+document.getElementById("card").style.display="block";
+},600);
+
+}
+
+</script>
+
+<span>&copy; 3YSi</span>
+
+</body>
+</html>
